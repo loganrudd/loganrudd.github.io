@@ -2,7 +2,7 @@
 layout: page
 title: This is a test page
 image: 07.jpg
-permalink: /about/
+permalink: /testpage/
 ---
 
 
