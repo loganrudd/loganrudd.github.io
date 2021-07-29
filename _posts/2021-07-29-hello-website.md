@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  <h1>Hello, website!</h1>
+title:  print("Hello, website!")
 date:   2021-07-29 16:05:55 +0300
 image:  nasa-earth.jpg
 tags:   [personal website, portfolio, blog]
