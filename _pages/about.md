@@ -5,13 +5,12 @@ image: me.jpg
 permalink: /about/
 ---
 
-My name is Logan Rudd. I am a machine learning engineer with a background in 
-physics instrumentation R&D in the fields of space exploration, accelerator
-physics, and particle astrophysics. Originally from Phoenix, AZ, I have lived 
-in Los Angeles, the SF east bay, and currently in Guadalajara, Mexico. When I'm
-not busy with work, and personal tech projects, I like to spend my time playing
-with my dog and exercising (calisthenics, running, climbing, and mountain 
-biking) outdoors as much as possible.
+Soy Logan Rudd. Soy machine learning engineer con una formación en I&D de 
+instrumentación física en los campos de exploración espacial, física de
+aceleradores, y astrofísica de partículas. Originalmente de Phoenix, AZ,
+he vivido en Los Angeles, SF East Bay, y actualmente en la zona metropolitana
+de Guadalajara. Cuando no esté programando, my gusta pasar el tiempo jugando
+con mi perra, escalando en roca, boxeando, y en bici de montaña.
 
 
 [//]: # (#### Austin scenester...)
