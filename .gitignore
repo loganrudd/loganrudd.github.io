@@ -5,3 +5,5 @@ _site
 .idea/
 2018-05-29-welcome-to-jekyll.markdown
 styleguide.md
+.bundle/
+vendor/
