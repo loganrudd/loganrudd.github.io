@@ -24,7 +24,7 @@
   {% endif %}
 
   <div class="widget widget-social">
-    <h3 class="widget-title">Subscribe & Follow</h3>
+    <h3 class="widget-title">Elsewhere</h3>
     <ul class="social-profiles list-reset">
       {% if site.linkedin %}
       <li class="social-profiles-item">
@@ -37,24 +37,13 @@
         <a href="{{ site.github }}" class="social-profiles-link"><i class="ion ion-logo-github"></i></a>
       </li>
       {% else %} {% endif %}
-    </ul>
-  </div>
 
-  <div class="widget widget-newsletter">
-    <h3 class="widget-title">Newsletter</h3>
-    <div class="newsletter-subtitle">Get Interesting News</div>
-    <div class="newsletter-text">Receive the latest news via email.</div>
-    <form class="c-newsletter-form validate" action="{% if site.mailchimp %}//{{site.mailchimp}}{% else %}#{% endif %}" method="POST"
-      id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-      <div class="newsletter-group">
-        <div class="newsletter-group-top">
-          <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
-          <i class="email-icon ion ion-ios-mail"></i>
-          <input class="newsletter-email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="E-mail">
-        </div>
-        <input class="newsletter-button" id="mc-embedded-subscribe" type="submit" name="subscribe" value="Subscribe">
-      </div>
-    </form>
+      {% if site.email %}
+      <li class="social-profiles-item">
+        <a href="mailto:{{ site.email }}" class="social-profiles-link"><i class="ion ion-ios-mail"></i></a>
+      </li>
+      {% else %} {% endif %}
+    </ul>
   </div>
 
   {% if site.instafeed == true %}

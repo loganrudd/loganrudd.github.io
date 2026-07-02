@@ -10,7 +10,7 @@
         </div>
         <div class="footer-bottom">
           <div class="copyright">
-            <p>&copy; {{site.time | date: '%Y'}} Crafted & Designed by <a href="https://github.com/artemsheludko">Artem Sheludko</a></p>
+            <p>&copy; {{site.time | date: '%Y'}} Logan Rudd. Theme by <a href="https://github.com/artemsheludko">Artem Sheludko</a></p>
           </div>
           <div class="footer-social">
             <ul class="list-reset">
@@ -20,6 +20,10 @@
 
               {% if site.github %}
               <li><a href="{{ site.github }}">GitHub</a></li>
+              {% else %} {% endif %}
+
+              {% if site.email %}
+              <li><a href="mailto:{{ site.email }}">Email</a></li>
               {% else %} {% endif %}
             </ul>
           </div>
