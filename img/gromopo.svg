@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16181d"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101010" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <g stroke="#232427" stroke-width="1">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <!-- three components as connected hexagons: chat / gromopo / vouched -->
+  <g fill="none" stroke-width="2.5">
+    <!-- vouched: on-chain ledger, hex -->
+    <polygon points="300,190 340,215 340,265 300,290 260,265 260,215" stroke="#C19CD8"/>
+    <!-- gromopo: ordering platform, hex -->
+    <polygon points="620,150 660,175 660,225 620,250 580,225 580,175" stroke="#1ABC9C"/>
+    <!-- chat: RAG service, hex -->
+    <polygon points="900,280 940,305 940,355 900,380 860,355 860,305" stroke="#1ABC9C"/>
+  </g>
+
+  <!-- ledger blocks inside vouched hex -->
+  <g fill="#C19CD8" opacity="0.85">
+    <rect x="288" y="222" width="10" height="10"/>
+    <rect x="302" y="222" width="10" height="10"/>
+    <rect x="288" y="236" width="10" height="10"/>
+    <rect x="302" y="236" width="10" height="10"/>
+  </g>
+
+  <!-- connecting flow: vouched -> indexer -> chat, gromopo -> vouched -->
+  <g stroke="#707890" stroke-width="1.5" fill="none" opacity="0.75">
+    <path d="M340,240 L580,200" stroke-dasharray="4 4"/>
+    <path d="M340,250 L860,330" marker-end="url(#arrow)"/>
+    <path d="M620,220 L300,215" stroke-dasharray="2 5"/>
+  </g>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#707890"/>
+    </marker>
+  </defs>
+
+  <!-- small nodes for vector-store fan across chat hex -->
+  <g fill="#C9D3E7" opacity="0.7">
+    <circle cx="905" cy="320" r="3"/>
+    <circle cx="920" cy="330" r="3"/>
+    <circle cx="912" cy="345" r="3"/>
+    <circle cx="928" cy="315" r="3"/>
+  </g>
+
+  <text x="300" y="330" font-family="monospace" font-size="13" fill="#C19CD8" text-anchor="middle" opacity="0.85">PDA</text>
+  <text x="620" y="290" font-family="monospace" font-size="13" fill="#1ABC9C" text-anchor="middle" opacity="0.85">order</text>
+  <text x="900" y="420" font-family="monospace" font-size="13" fill="#1ABC9C" text-anchor="middle" opacity="0.85">RAG</text>
+
+  <rect width="1200" height="600" fill="url(#scrim)"/>
+</svg>

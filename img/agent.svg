@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16181d"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101010" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.85"/>
+    </linearGradient>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#707890"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <g stroke="#232427" stroke-width="1">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <!-- four-stage loop: Harness -> Detector -> Correction -> Viewer -->
+  <g fill="none" stroke-width="2.5">
+    <rect x="220" y="240" width="120" height="60" rx="6" stroke="#C9D3E7" opacity="0.8"/>
+    <rect x="440" y="180" width="120" height="60" rx="6" stroke="#1ABC9C"/>
+    <rect x="660" y="240" width="120" height="60" rx="6" stroke="#C19CD8" opacity="0.8"/>
+    <rect x="880" y="180" width="120" height="60" rx="6" stroke="#C9D3E7" opacity="0.8"/>
+  </g>
+
+  <g stroke="#707890" stroke-width="1.5" fill="none" opacity="0.8">
+    <path d="M340,270 L440,235" marker-end="url(#arrow2)"/>
+    <path d="M560,215 L660,255" marker-end="url(#arrow2)"/>
+    <path d="M780,255 L880,215" marker-end="url(#arrow2)"/>
+  </g>
+  <!-- feedback loop back to harness -->
+  <path d="M940,180 C 940,90 300,90 280,240" stroke="#707890" stroke-width="1.5" fill="none" stroke-dasharray="4 4" opacity="0.6" marker-end="url(#arrow2)"/>
+
+  <!-- drift waveform emphasizing the detector -->
+  <path d="M440,340 L470,340 L485,320 L500,360 L520,300 L545,340 L560,340"
+        fill="none" stroke="#1ABC9C" stroke-width="2.5" opacity="0.9"/>
+  <circle cx="500" cy="360" r="5" fill="none" stroke="#e02f40" stroke-width="2"/>
+
+  <text x="280" y="330" font-family="monospace" font-size="12" fill="#C9D3E7" text-anchor="middle" opacity="0.8">harness</text>
+  <text x="500" y="165" font-family="monospace" font-size="12" fill="#1ABC9C" text-anchor="middle" opacity="0.9">detector</text>
+  <text x="720" y="330" font-family="monospace" font-size="12" fill="#C19CD8" text-anchor="middle" opacity="0.8">correction</text>
+  <text x="940" y="165" font-family="monospace" font-size="12" fill="#C9D3E7" text-anchor="middle" opacity="0.8">viewer</text>
+
+  <rect width="1200" height="600" fill="url(#scrim)"/>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16181d"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101010" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <!-- faint grid -->
+  <g stroke="#232427" stroke-width="1">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <!-- orbital arc, evokes spacecraft -->
+  <circle cx="980" cy="150" r="230" fill="none" stroke="#3E4250" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="980" cy="150" r="2" fill="#C19CD8"/>
+  <circle cx="820" cy="330" r="4" fill="#1ABC9C"/>
+
+  <!-- per-channel telemetry waveforms, fanning out (fan-out problem) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60,220 L140,220 L160,180 L200,260 L230,140 L270,220 L340,220 L370,190 L410,230 L460,220 L620,220"
+          stroke="#1ABC9C" stroke-width="3" opacity="0.95"/>
+    <path d="M60,300 L150,300 L175,270 L210,330 L245,285 L300,300 L420,300 L450,320 L500,290 L560,300 L620,300"
+          stroke="#C9D3E7" stroke-width="2" opacity="0.55"/>
+    <path d="M60,380 L130,380 L165,355 L195,405 L235,365 L280,380 L360,380 L395,400 L445,370 L500,380 L620,380"
+          stroke="#C19CD8" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <!-- anomaly markers -->
+  <circle cx="200" cy="260" r="6" fill="none" stroke="#e02f40" stroke-width="2"/>
+  <circle cx="230" cy="140" r="6" fill="none" stroke="#e02f40" stroke-width="2"/>
+
+  <!-- channel nodes converging into the platform -->
+  <g fill="#1ABC9C">
+    <circle cx="620" cy="220" r="5"/>
+    <circle cx="620" cy="300" r="5" fill="#C9D3E7" opacity="0.7"/>
+    <circle cx="620" cy="380" r="5" fill="#C19CD8" opacity="0.7"/>
+  </g>
+  <g stroke="#707890" stroke-width="1.5" opacity="0.6">
+    <line x1="620" y1="220" x2="700" y2="270"/>
+    <line x1="620" y1="300" x2="700" y2="270"/>
+    <line x1="620" y1="380" x2="700" y2="270"/>
+  </g>
+  <rect x="700" y="245" width="90" height="50" rx="6" fill="none" stroke="#1ABC9C" stroke-width="2"/>
+  <text x="745" y="276" font-family="monospace" font-size="13" fill="#1ABC9C" text-anchor="middle" opacity="0.9">×225</text>
+
+  <rect width="1200" height="600" fill="url(#scrim)"/>
+</svg>
