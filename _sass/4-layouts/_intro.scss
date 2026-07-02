@@ -1,0 +1,44 @@
+// Home positioning intro
+.intro {
+  padding: 50px 0 20px;
+
+  .intro-name {
+    margin-bottom: 5px;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $white;
+  }
+
+  .intro-tagline {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  .intro-statement {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 28px;
+    color: $text;
+
+    em {
+      font-style: normal;
+      color: $white;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    padding: 70px 0 30px;
+
+    .intro-name {
+      font-size: 42px;
+    }
+
+    .intro-tagline {
+      font-size: 21px;
+    }
+  }
+}
