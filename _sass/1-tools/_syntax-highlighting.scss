@@ -3,10 +3,14 @@
 */
 
 .highlight {
-  background: $blue-black;
+  background: $black;
+  color: $text;
+  border: 1px solid $border-color;
+  border-radius: $global-radius;
 
   .highlighter-rouge & {
-    background: #eef;
+    background: $black;
+    color: $text;
   }
 
   .c     { color: #998; font-style: italic } // Comment
