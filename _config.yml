@@ -1,8 +1,8 @@
 #-------------------------------
 # General Site Settings
 
-title: Galada Theme | Theme for Jekyll
-description: Galada is an easy and simple theme for Jekyll. Dark colors, give it a special exquisite look. A careful approach to design and features make it an ideal solution for a personal blog. # this means to ignore newlines until "baseurl:"
+title: Logan Rudd — ML Infrastructure Engineer
+description: ML infrastructure engineer for physical systems. Instrumentation physics R&D at national labs (JPL, Fermilab, Berkeley Lab), then production ML at fintech scale.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://loganrudd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -17,6 +17,7 @@ author-avatar: me.jpg
 # Contact links
 linkedin:  https://linkedin.com/in/logan-rudd/ # Add your LinkedIn handle
 github:   https://github.com/loganrudd/ # Add your GitHub handle
+email:     loganrudd@gmail.com
 
 
 #-------------------------------
