@@ -1,9 +1,10 @@
 ---
 layout: page
 title: About
-image: profile-photo.jpeg
 permalink: /about/
 ---
+
+<img src="{{ site.baseurl }}/img/profile-photo.jpeg" alt="Logan Rudd" class="about-portrait">
 
 I'm Logan Rudd, an ML infrastructure engineer for physical systems.
 

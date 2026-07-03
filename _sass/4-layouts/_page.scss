@@ -54,6 +54,16 @@
 
 .page-body {
   padding-bottom: 20px;
+
+  .about-portrait {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.25);
+  }
 }
 
 @media only screen and (min-width: 576px) {
