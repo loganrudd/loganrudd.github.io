@@ -6,11 +6,7 @@ $(function() {
   ======================= */
   var $menuOpenButton = $(".menu-button"),
       $menuCloseButton = $(".menu-close"),
-      $navMenu = $(".nav-menu"),
-
-      $searchOpenButton = $(".search-button"),
-      $searchCloseButton = $(".search-close-button"),
-      $search = $(".search");
+      $navMenu = $(".nav-menu");
 
   $(window).on("resize", function () {
     var e = $(this);
@@ -27,14 +23,6 @@ $(function() {
     closeMenu();
   });
 
-  $searchOpenButton.on("click", function() {
-    openSearch();
-  });
-
-  $searchCloseButton.on("click", function() {
-    closeSearch();
-  });
-
 
   function openMenu() {
     $navMenu.addClass("active");
@@ -42,14 +30,6 @@ $(function() {
 
   function closeMenu() {
     $navMenu.removeClass("active");
-  }
-
-  function openSearch() {
-    $search.addClass("active");
-  }
-
-  function closeSearch() {
-    $search.removeClass("active");
   }
 
 
