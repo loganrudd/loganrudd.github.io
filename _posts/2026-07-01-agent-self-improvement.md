@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Agent Self-Improvement
-date: 2026-06-12 09:00:00 +0000
+date: 2026-07-01 09:00:00 +0000
 image: agent.svg
 tags: [Agents, ML Infrastructure]
 description: A self-correcting text-to-SQL agent that detects its own performance drift with windowed statistics and learns from its failures — recovery validated by a McNemar test. I owned the drift-detection stage.

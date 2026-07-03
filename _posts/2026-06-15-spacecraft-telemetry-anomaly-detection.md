@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spacecraft Telemetry Anomaly Detection
-date: 2026-06-28 09:00:00 +0000
+date: 2026-06-15 09:00:00 +0000
 image: telemetry.svg
 tags: [ML Infrastructure, Aerospace]
 description: An end-to-end MLOps platform detecting anomalies across hundreds of channels of real ESA spacecraft telemetry — built so per-channel models stay trainable and servable without infra cost exploding.
