@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16181d"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101010" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="earth" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1c2a3a"/>
+      <stop offset="100%" stop-color="#0d1420"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <!-- faint grid -->
+  <g stroke="#232427" stroke-width="1">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <!-- LEO orbit with a zone-of-exclusion gap (dashed = link lost) -->
+  <g fill="none">
+    <circle cx="980" cy="140" r="110" stroke="#1ABC9C" stroke-width="1.5" opacity="0.55"
+            stroke-dasharray="180 44" stroke-dashoffset="70"/>
+    <circle cx="980" cy="140" r="42" fill="url(#earth)" stroke="#3E4250" stroke-width="1"/>
+  </g>
+  <!-- ISS node on orbit + relay handover point -->
+  <circle cx="1063" cy="176" r="4" fill="#C9D3E7"/>
+  <circle cx="899" cy="98" r="4" fill="#e02f40"/>
+  <text x="899" y="80" font-family="monospace" font-size="11" fill="#e02f40" text-anchor="middle" opacity="0.85">LOS</text>
+
+  <!-- fragmented telemetry: each contiguous run ends at an LOS gap -->
+  <g fill="none" stroke="#1ABC9C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M60,300 L100,300 L120,272 L150,326 L185,286 L215,300"/>
+    <path d="M290,300 L330,300 L352,330 L384,270 L415,320 L455,300 L470,300"/>
+    <path d="M520,300 L560,300 L585,268 L618,330 L650,282 L690,318 L725,286 L760,300"/>
+    <path d="M815,300 L855,300 L878,330 L910,276 L945,314 L985,300 L1000,300"/>
+    <path d="M1050,300 L1090,300 L1112,282 L1140,300"/>
+  </g>
+
+  <!-- LOS dropout markers between segments -->
+  <g stroke="#e02f40" stroke-width="1.5" opacity="0.7" stroke-dasharray="3 4">
+    <line x1="252" y1="250" x2="252" y2="360"/>
+    <line x1="495" y1="250" x2="495" y2="360"/>
+    <line x1="787" y1="250" x2="787" y2="360"/>
+    <line x1="1025" y1="250" x2="1025" y2="360"/>
+  </g>
+
+  <!-- window brackets over the longest segment: W=128 fits, W=250 doesn't -->
+  <g stroke="#1ABC9C" stroke-width="2" fill="none">
+    <path d="M520,378 L520,392 L640,392 L640,378"/>
+  </g>
+  <text x="580" y="414" font-family="monospace" font-size="13" fill="#1ABC9C" text-anchor="middle">W=128 fits</text>
+
+  <g stroke="#e02f40" stroke-width="2" fill="none" stroke-dasharray="6 5">
+    <path d="M520,232 L520,218 L810,218 L810,232"/>
+  </g>
+  <line x1="787" y1="205" x2="787" y2="231" stroke="#e02f40" stroke-width="2"/>
+  <text x="665" y="205" font-family="monospace" font-size="13" fill="#e02f40" text-anchor="middle">W=250 crosses an LOS gap</text>
+
+  <rect width="1200" height="600" fill="url(#scrim)"/>
+</svg>
