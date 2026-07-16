@@ -1,21 +1,10 @@
 ---
 layout: default
 ---
-<div class="container">
-	<div class="row">
-		<div class="col col-12">
-			<div class="post-image-box">
-				<div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<article class="col col-12 col-t-8 post">
-			<div class="post-content">
-
+<div class="post-hero" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})">
+	<div class="container">
+		<div class="row">
+			<div class="col col-12">
 				<div class="post-head">
 					{% if page.tags.size >= 1 %}
 					<div class="post-tag">
@@ -38,6 +27,15 @@ layout: default
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<article class="col col-12 col-t-8 post">
+			<div class="post-content">
 
 				<div class="post-body">
 					{{ content }}

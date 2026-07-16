@@ -3,35 +3,75 @@
   margin-bottom: 20px;
 }
 
-.post-image-box {
-  background: $black;
-  &.reveal-in {
-    .post-image {
-      opacity: 1;
+.post-hero {
+  position: relative;
+  margin-bottom: 40px;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  background-color: $black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 9px 18px 0 rgba(0,0,0,0.25);
+  overflow: hidden;
+
+  // gradient scrim so the overlaid title stays legible on any image
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
+
+  .post-head {
+    padding-bottom: 0;
+    background: transparent;
+  }
+
+  .post-title {
+    color: #fff;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 12px;
+  }
+
+  .post-info .post-info-author {
+    .info-author-name,
+    span {
+      color: $white;
+    }
+  }
+
+  .post-date span {
+    color: rgba($white, .85);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .post-hero {
+    min-height: 440px;
+    .post-title {
+      font-size: 44px;
+      line-height: 48px;
     }
   }
 }
 
-.post-image {
-  min-height: 430px;
-  margin-bottom: 30px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: $black;
-  box-shadow: 0 9px 18px 0 rgba(0,0,0,0.25);
-  position: relative;
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.6, 0.3, 0, 1);
-  &:after {
-    content: "";
-    display: table;
-    width: 100%;
-    padding-top: 50%;
-  }
-}
-
-.post-head, .post-content {
+.post-content {
   background: rgba($blue-darken, .95);
 }
 
@@ -40,7 +80,7 @@
   box-shadow: 0 9px 18px 0 rgba(0,0,0,0.25);
 }
 
-.post-head, .post-body {
+.post-body {
   margin-bottom: 20px;
   border-bottom: 1px solid $border-color;
 }

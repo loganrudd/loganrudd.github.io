@@ -9,6 +9,7 @@
 }
 
 .header-box {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -309,12 +310,6 @@
 
 .article-first .article-image-first, .article-box .article-image {
   position: relative;
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.6, 0.3, 0, 1);
-}
-
-.article-first.reveal-in .article-image-first, .article-box.reveal-in .article-image {
-  opacity: 1;
 }
 
 
@@ -355,15 +350,20 @@
 
 @media only screen and (min-width: 992px) {
   .nav-menu {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
     display: block;
-    transform: none;
     opacity: 1;
     z-index: 10;
     background: transparent;
     .menu-list {
       padding: 0;
       margin: 0;
+      text-align: center;
       .menu-item {
         display: inline-block;
         margin: 0 15px 0 0;
