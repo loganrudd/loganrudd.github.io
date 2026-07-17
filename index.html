@@ -34,7 +34,7 @@ layout: default
 						{% else %} {% endif %}
 						</div>
 						<h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h2>
-						<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 163 }}{% else %}{{ post.content | strip_html | truncate: 163 }}{% endif %}</p>
+						<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html }}{% else %}{{ post.content | strip_html }}{% endif %}</p>
 						<a href="{{ post.url | prepend: site.baseurl }}" class="button read-more">Read More</a>
 					</div>
 				</div>
@@ -77,7 +77,7 @@ layout: default
 							<h2 class="article-title">
 								<a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
 							</h2>
-							<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 135 }}{% else %}{{ post.content | strip_html | truncate: 135 }}{% endif %}</p>
+							<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html }}{% else %}{{ post.content | strip_html }}{% endif %}</p>
 						</div>
 					</div>
 				</article> <!-- /.article -->
